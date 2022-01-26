@@ -7,6 +7,8 @@ const CalculatorKeys = ({
   setSelectedNum,
   runningTotal,
   setRunningTotal,
+  operationString,
+  setOperationString,
 }) => {
   return (
     <div id="calculator-keys">
@@ -15,8 +17,17 @@ const CalculatorKeys = ({
         setSelectedNum={setSelectedNum}
         runningTotal={runningTotal}
         setRunningTotal={setRunningTotal}
+        operationString={operationString}
+        setOperationString={setOperationString}
       />
-      <NumberKeys selectedNum={selectedNum} setSelectedNum={setSelectedNum} />
+      <NumberKeys
+        selectedNum={selectedNum}
+        setSelectedNum={setSelectedNum}
+        operationString={operationString}
+        setOperationString={setOperationString}
+        runningTotal={runningTotal}
+        setRunningTotal={setRunningTotal}
+      />
     </div>
   );
 };

@@ -1,6 +1,13 @@
 import React from "react";
 
-const OperationKeys = () => {
+const OperationKeys = ({
+  selectedNum,
+  setSelectedNum,
+  operationString,
+  setOperationString,
+  runningTotal,
+  setRunningTotal,
+}) => {
   const add = (num) => {
     console.log("ADD FUNC");
   };
