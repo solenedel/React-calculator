@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import CalculatorKeys from "./components/CalculatorKeys";
 import Output from "./components/Output";
 
 function App() {
+  const [selectedNum, setSelectedNum] = useState(0);
+
   return (
     <div className="App">
-      <h3>Calculator app</h3>
+      <div>Selected number: {selectedNum}</div>
       <Output />
-      <CalculatorKeys />
+      <CalculatorKeys
+        selectedNum={selectedNum}
+        setSelectedNum={setSelectedNum}
+      />
     </div>
   );
 }

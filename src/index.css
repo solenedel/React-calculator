@@ -37,3 +37,20 @@ div#output-box {
   width: 30vw;
   margin-top: 50px; 
 }
+
+div#calculator-keys {
+  border: solid cornflowerblue 3px;
+  border-radius: 5px;
+  width: 30vw;
+  margin-top: 50px; 
+}
+
+button.operation-btn {
+  background: #A6FFC6;
+  font-size: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 50px;
+  margin: 5px;
+}
