@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import CalculatorKeys from "./components/CalculatorKeys";
-import Output from "./components/Output";
+import NumberKeys from "./CalculatorKeys/NumberKeys";
+import OperationKeys from "./CalculatorKeys/OperationKeys";
+import Output from "./Output";
 
 function App() {
   const [numsArray, setNumsArray] = useState([]);
@@ -9,7 +10,8 @@ function App() {
   return (
     <div className="App">
       <Output />
-      <CalculatorKeys />
+      <OperationKeys />
+      <NumberKeys />
     </div>
   );
 }
