@@ -14,7 +14,13 @@ function App() {
   return (
     <div className="App">
       <Output />
-      <OperationKeys />
+      <OperationKeys
+        currentNum={currentNum}
+        setCurrentNum={setCurrentNum}
+        numsArray={numsArray}
+        setNumsArray={setNumsArray}
+        selectedNum={selectedNum}
+      />
       <NumberKeys
         selectedNum={selectedNum}
         setSelectedNum={setSelectedNum}
@@ -24,6 +30,7 @@ function App() {
       <div className="testing">
         <li>selectedNum: {selectedNum}</li>
         <li>currentNum: {currentNum}</li>
+        <li>numsArray: {numsArray}</li>
       </div>
     </div>
   );

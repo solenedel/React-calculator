@@ -11,15 +11,17 @@ const NumberKeys = ({
   // click on a number button
   const numberButtonClick = (num) => {
     setSelectedNum(num);
-    console.log("SELECTED NUM: ", selectedNum);
+    // console.log("SELECTED NUM: ", selectedNum);
+  };
 
+  const test = () => {
     if (currentNum.length) {
       setCurrentNum(currentNum + selectedNum.toString());
-      console.log("CURRENT NUM: ", currentNum);
+      // console.log("CURRENT NUM: ", currentNum);
     } else if (selectedNum !== 0) {
       // ignore zero as the first digit
       setCurrentNum(selectedNum.toString());
-      console.log("STARTING CURRENT NUM: ", currentNum);
+      // console.log("STARTING CURRENT NUM: ", currentNum);
     }
   };
 
@@ -31,7 +33,10 @@ const NumberKeys = ({
             key={num}
             type="button"
             className="number-btn"
-            onClick={() => numberButtonClick(num)}
+            onClick={() => {
+              numberButtonClick(num);
+              test();
+            }}
           >
             <strong>{num}</strong>
           </button>
