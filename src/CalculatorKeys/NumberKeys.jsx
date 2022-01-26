@@ -1,13 +1,38 @@
 import React from "react";
 
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const buttonNumbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const NumberKeys = () => {
+const NumberKeys = ({
+  selectedNum,
+  setSelectedNum,
+  currentNum,
+  setCurrentNum,
+}) => {
+  // click on a number button
+  const numberButtonClick = (num) => {
+    setSelectedNum(num);
+    console.log("SELECTED NUM: ", selectedNum);
+
+    if (currentNum.length) {
+      setCurrentNum(currentNum + selectedNum.toString());
+      console.log("CURRENT NUM: ", currentNum);
+    } else if (selectedNum !== 0) {
+      // ignore zero as the first digit
+      setCurrentNum(selectedNum.toString());
+      console.log("STARTING CURRENT NUM: ", currentNum);
+    }
+  };
+
   return (
     <div>
-      {numbers.map((num) => {
+      {buttonNumbers.map((num) => {
         return (
-          <button key={num} type="button" className="number-btn">
+          <button
+            key={num}
+            type="button"
+            className="number-btn"
+            onClick={() => numberButtonClick(num)}
+          >
             <strong>{num}</strong>
           </button>
         );

@@ -15,7 +15,16 @@ function App() {
     <div className="App">
       <Output />
       <OperationKeys />
-      <NumberKeys />
+      <NumberKeys
+        selectedNum={selectedNum}
+        setSelectedNum={setSelectedNum}
+        currentNum={currentNum}
+        setCurrentNum={setCurrentNum}
+      />
+      <div className="testing">
+        <li>selectedNum: {selectedNum}</li>
+        <li>currentNum: {currentNum}</li>
+      </div>
     </div>
   );
 }
