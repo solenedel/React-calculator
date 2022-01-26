@@ -1,4 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "javascript.preferences.quoteStyle": "double"
+  "javascript.preferences.quoteStyle": "double",
+  "files.autoSave": "onFocusChange",
+  "typescript.preferences.quoteStyle": "double"
 }
