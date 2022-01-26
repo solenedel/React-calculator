@@ -5,13 +5,13 @@ const Output = ({
   setRunningTotal,
   selectedNum,
   setSelectedNum,
-  calcDisplay,
-  setCalcDisplay,
+  operationString,
+  setOperationString,
 }) => {
   const clear = () => {
     setRunningTotal(0);
     setSelectedNum(0);
-    setCalcDisplay("");
+    setOperationString("");
     console.log("cleared numbers");
   };
 
@@ -20,7 +20,7 @@ const Output = ({
       <button type="button" onClick={clear} id="clear-btn">
         clear
       </button>
-      <div>calcDisplay {calcDisplay}</div>
+      <div>running total: {runningTotal} </div>
     </div>
   );
 };

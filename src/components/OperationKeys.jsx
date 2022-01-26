@@ -9,23 +9,23 @@ const OperationKeys = ({
   setRunningTotal,
 }) => {
   const add = (num) => {
-    console.log("ADD FUNC");
+    setOperationString(operationString + "+");
   };
 
   const subtract = (num) => {
-    console.log("SUBTRACT FUNC");
+    setOperationString(operationString + "-");
   };
 
   const multiply = (num) => {
-    console.log("MULTIPLY FUNC");
+    setOperationString(operationString + "*");
   };
 
   const divide = (num) => {
-    console.log("DIVIDE FUNC");
+    setOperationString(operationString + "/");
   };
 
   const equals = (num) => {
-    console.log("EQUALS FUNC");
+    console.log("EQUALS FUNC- calculate now");
   };
 
   return (
