@@ -4,8 +4,12 @@ import OperationKeys from "./CalculatorKeys/OperationKeys";
 import Output from "./Output";
 
 function App() {
-  const [numsArray, setNumsArray] = useState([]);
-  const [operandsArray, setOperandsArray] = useState([]);
+  const [selectedNum, setSelectedNum] = useState(0); // single digit integer only
+  const [currentNum, setCurrentNum] = useState(""); // can be miltiple digits (string)
+  const [numsArray, setNumsArray] = useState([]); // all integer types
+
+  const [selectedOperand, setSelectedOperand] = useState(""); // single string operand only
+  const [operandsArray, setOperandsArray] = useState([]); // all single strings only (str.length = 1)
 
   return (
     <div className="App">
