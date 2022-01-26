@@ -16,7 +16,7 @@ const CalculatorKeys = ({
         runningTotal={runningTotal}
         setRunningTotal={setRunningTotal}
       />
-      <NumberKeys />
+      <NumberKeys selectedNum={selectedNum} setSelectedNum={setSelectedNum} />
     </div>
   );
 };

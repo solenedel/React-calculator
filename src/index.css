@@ -32,10 +32,11 @@ a, a:hover, a:visited {
 }
 
 div#output-box {
-  border: solid pink 3px;
+  border: solid white 3px;
   border-radius: 5px;
   width: 40vw;
   margin-top: 50px; 
+  padding: 5px;
 }
 
 div#calculator-keys {
@@ -45,7 +46,7 @@ div#calculator-keys {
 }
 
 button.operation-btn {
-  background: #A6FFC6;
+  background: #FFD4B4;
   font-size: 30px;
   border: none;
   border-radius: 5px;
@@ -60,7 +61,6 @@ button#clear-btn {
   border-radius: 5px;
   font-size: 25px;
   padding: 5px;
-  margin-left: 50px;
 }
 
 button.number-btn {
@@ -71,4 +71,8 @@ button.number-btn {
   padding: 5px;
   width: 50px;
   margin: 5px;
+}
+
+button#equals-btn {
+  background: #A6FFC6;
 }

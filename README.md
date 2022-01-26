@@ -1,6 +1,7 @@
 # React calculator
 
 ## Features
+- INTEGERS ONLY! no decimal numbers
 - random number generator using API
 
 

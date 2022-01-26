@@ -14,10 +14,10 @@ const Output = ({
 
   return (
     <div id="output-box">
-      {runningTotal}
       <button type="button" onClick={clear} id="clear-btn">
         clear
       </button>
+      <div>selectedNum {selectedNum}</div>
     </div>
   );
 };

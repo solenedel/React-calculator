@@ -24,19 +24,24 @@ const OperationKeys = () => {
   return (
     <div id="operation-keys">
       <button type="button" className="operation-btn" onClick={add}>
-        +
+        <strong>+</strong>
       </button>
       <button type="button" className="operation-btn" onClick={subtract}>
-        -
+        <strong>-</strong>
       </button>
       <button type="button" className="operation-btn" onClick={divide}>
-        /
+        <strong>/</strong>
       </button>
       <button type="button" className="operation-btn" onClick={multiply}>
-        *
+        <strong>*</strong>
       </button>
-      <button type="button" className="operation-btn" onClick={equals}>
-        =
+      <button
+        type="button"
+        className="operation-btn"
+        id="equals-btn"
+        onClick={equals}
+      >
+        <strong>=</strong>
       </button>
     </div>
   );
