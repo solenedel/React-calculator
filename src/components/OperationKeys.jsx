@@ -1,53 +1,21 @@
 import React from "react";
 
-const OperationKeys = ({
-  selectedNum,
-  setSelectedNum,
-  operationString,
-  setOperationString,
-  runningTotal,
-  setRunningTotal,
-}) => {
-  const add = (num) => {
-    setOperationString(operationString + "+");
-  };
-
-  const subtract = (num) => {
-    setOperationString(operationString + "-");
-  };
-
-  const multiply = (num) => {
-    setOperationString(operationString + "*");
-  };
-
-  const divide = (num) => {
-    setOperationString(operationString + "/");
-  };
-
-  const equals = (num) => {
-    console.log("EQUALS FUNC- calculate now");
-  };
-
+const OperationKeys = () => {
   return (
     <div id="operation-keys">
-      <button type="button" className="operation-btn" onClick={add}>
+      <button type="button" className="operation-btn">
         <strong>+</strong>
       </button>
-      <button type="button" className="operation-btn" onClick={subtract}>
+      <button type="button" className="operation-btn">
         <strong>-</strong>
       </button>
-      <button type="button" className="operation-btn" onClick={divide}>
+      <button type="button" className="operation-btn">
         <strong>/</strong>
       </button>
-      <button type="button" className="operation-btn" onClick={multiply}>
+      <button type="button" className="operation-btn">
         <strong>*</strong>
       </button>
-      <button
-        type="button"
-        className="operation-btn"
-        id="equals-btn"
-        onClick={equals}
-      >
+      <button type="button" className="operation-btn" id="equals-btn">
         <strong>=</strong>
       </button>
     </div>

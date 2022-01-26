@@ -2,27 +2,12 @@ import React from "react";
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const NumberKeys = ({
-  selectedNum,
-  setSelectedNum,
-  runningTotal,
-  setRunningTotal,
-  operationString,
-  setOperationString,
-}) => {
+const NumberKeys = () => {
   return (
     <div>
       {numbers.map((num) => {
         return (
-          <button
-            key={num}
-            type="button"
-            className="number-btn"
-            onClick={() => {
-              setSelectedNum(num);
-              setOperationString(operationString + num);
-            }}
-          >
+          <button key={num} type="button" className="number-btn">
             <strong>{num}</strong>
           </button>
         );

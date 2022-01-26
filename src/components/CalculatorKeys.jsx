@@ -2,32 +2,11 @@ import React from "react";
 import OperationKeys from "./OperationKeys";
 import NumberKeys from "./NumberKeys";
 
-const CalculatorKeys = ({
-  selectedNum,
-  setSelectedNum,
-  runningTotal,
-  setRunningTotal,
-  operationString,
-  setOperationString,
-}) => {
+const CalculatorKeys = () => {
   return (
     <div id="calculator-keys">
-      <OperationKeys
-        selectedNum={selectedNum}
-        setSelectedNum={setSelectedNum}
-        runningTotal={runningTotal}
-        setRunningTotal={setRunningTotal}
-        operationString={operationString}
-        setOperationString={setOperationString}
-      />
-      <NumberKeys
-        selectedNum={selectedNum}
-        setSelectedNum={setSelectedNum}
-        operationString={operationString}
-        setOperationString={setOperationString}
-        runningTotal={runningTotal}
-        setRunningTotal={setRunningTotal}
-      />
+      <OperationKeys />
+      <NumberKeys />
     </div>
   );
 };
