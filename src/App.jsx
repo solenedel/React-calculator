@@ -20,17 +20,27 @@ function App() {
         numsArray={numsArray}
         setNumsArray={setNumsArray}
         selectedNum={selectedNum}
+        selectedOperand={selectedOperand}
+        setSelectedOperand={setSelectedOperand}
+        operandsArray={operandsArray}
+        setOperandsArray={setOperandsArray}
       />
       <NumberKeys
         selectedNum={selectedNum}
         setSelectedNum={setSelectedNum}
         currentNum={currentNum}
         setCurrentNum={setCurrentNum}
+        selectedOperand={selectedOperand}
+        setSelectedOperand={setSelectedOperand}
+        operandsArray={operandsArray}
+        setOperandsArray={setOperandsArray}
       />
       <div className="testing">
         <li>selectedNum: {selectedNum}</li>
-        <li>currentNum: {currentNum}</li>
+        {/* <li>currentNum: {currentNum}</li> */}
         <li>numsArray: {numsArray}</li>
+        <li>selectedOperand: {selectedOperand}</li>
+        <li>operandsArray: {operandsArray}</li>
       </div>
     </div>
   );

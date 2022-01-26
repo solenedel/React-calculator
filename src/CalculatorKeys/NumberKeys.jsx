@@ -7,14 +7,16 @@ const NumberKeys = ({
   setSelectedNum,
   currentNum,
   setCurrentNum,
+  selectedOperand,
+  setSelectedOperand,
+  operandsArray,
+  setOperandsArray,
 }) => {
   // click on a number button
   const numberButtonClick = (num) => {
     setSelectedNum(num);
     // console.log("SELECTED NUM: ", selectedNum);
-  };
 
-  const test = () => {
     if (currentNum.length) {
       setCurrentNum(currentNum + selectedNum.toString());
       // console.log("CURRENT NUM: ", currentNum);
@@ -22,6 +24,11 @@ const NumberKeys = ({
       // ignore zero as the first digit
       setCurrentNum(selectedNum.toString());
       // console.log("STARTING CURRENT NUM: ", currentNum);
+    }
+
+    // only add selectedOperand to the array if there is already a currentNumber
+    if (currentNum.length) {
+      setOperandsArray([...operandsArray], selectedOperand);
     }
   };
 
@@ -35,7 +42,6 @@ const NumberKeys = ({
             className="number-btn"
             onClick={() => {
               numberButtonClick(num);
-              test();
             }}
           >
             <strong>{num}</strong>

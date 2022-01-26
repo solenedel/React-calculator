@@ -6,13 +6,25 @@ const OperationKeys = ({
   numsArray,
   setNumsArray,
   selectedNum,
+  operandsArray,
+  setOperandsArray,
+  selectedOperand,
+  setSelectedOperand,
 }) => {
   // click on an operand button
-  const operandButtonClick = () => {
+  const operandButtonClick = (e) => {
     // add the last digit to currentNum - why does this not work in numberButtonClick ??
-    // setCurrentNum(currentNum + selectedNum.toString());
+    // setCurrentNum(currentNum + selectedNum.toString()); // useless here
+    console.log(" typeof E.TARGET.INNERHTML: ", typeof e.target.innerHTML);
+
     setNumsArray([...numsArray, Number(currentNum + selectedNum.toString())]);
+
+    setSelectedOperand(e.target.innerHTML);
   };
+
+  // const equalsButtonClick = () => {
+
+  // };
 
   return (
     <div id="operation-keys">
@@ -21,28 +33,28 @@ const OperationKeys = ({
         className="operation-btn"
         onClick={operandButtonClick}
       >
-        <strong>+</strong>
+        +
       </button>
       <button
         type="button"
         className="operation-btn"
         onClick={operandButtonClick}
       >
-        <strong>-</strong>
+        -
       </button>
       <button
         type="button"
         className="operation-btn"
         onClick={operandButtonClick}
       >
-        <strong>/</strong>
+        /
       </button>
       <button
         type="button"
         className="operation-btn"
         onClick={operandButtonClick}
       >
-        <strong>*</strong>
+        *
       </button>
       <button
         type="button"
@@ -50,7 +62,7 @@ const OperationKeys = ({
         onClick={operandButtonClick}
         id="equals-btn"
       >
-        <strong>=</strong>
+        =
       </button>
     </div>
   );
