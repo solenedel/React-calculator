@@ -4,6 +4,7 @@ import Output from "./components/Output";
 
 function App() {
   const [selectedNum, setSelectedNum] = useState(0);
+  const [runningTotal, setRunningTotal] = useState(0);
 
   return (
     <div className="App">
@@ -12,6 +13,8 @@ function App() {
       <CalculatorKeys
         selectedNum={selectedNum}
         setSelectedNum={setSelectedNum}
+        runningTotal={runningTotal}
+        setRunningTotal={setRunningTotal}
       />
     </div>
   );
