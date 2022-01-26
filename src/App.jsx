@@ -9,7 +9,10 @@ function App() {
   return (
     <div className="App">
       <div>Selected number: {selectedNum}</div>
-      <Output />
+      <Output
+        setSelectedNum={setSelectedNum}
+        setRunningTotal={setRunningTotal}
+      />
       <CalculatorKeys
         selectedNum={selectedNum}
         setSelectedNum={setSelectedNum}

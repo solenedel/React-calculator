@@ -1,10 +1,23 @@
 import React from "react";
 
-const Output = () => {
+const Output = ({
+  runningTotal,
+  setRunningTotal,
+  selectedNum,
+  setSelectedNum,
+}) => {
+  const clear = () => {
+    setRunningTotal(0);
+    setSelectedNum(0);
+    console.log("cleared numbers");
+  };
+
   return (
     <div id="output-box">
-      Output
-      <button type="button">clear</button>
+      {runningTotal}
+      <button type="button" onClick={clear} id="clear-btn">
+        clear
+      </button>
     </div>
   );
 };
